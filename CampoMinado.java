@@ -1,63 +1,46 @@
-import java.util.Random;
+package 03-Lists.lab01.class;
+import java.util.*;
 
 public class CampoMinado {
-    public static final int TOTAL_BOMBAS=10;
-    private char gabarito[][]= new char[10][10];
-    private char visual[][]= new char[10][10];
+
+    static int TOTAL_DE_BOMBAS = 10;
+    private char[][] visual = new char[10][10];
+    private char[][] game = new char[10][10];
+    private boolean final;
     private int jogadas;
-    private boolean fimJogo;
 
     public CampoMinado(){
+        final = false;
         jogadas = 10;
-        fimJogo = false;
-        for(int i = 0; i < 10; i++){
-            for(int j = 0; j < 10; j++){
+        for (int i = 0; i < 10; i++){
+            for (int j = 0; j<10; j++){
                 visual[i][j] = '?';
-                gabarito[i][j] = ' ';
-            }
-        }
-        Random r = new Random();
-        for(int i=0; i < TOTAL_BOMBAS; i++){
-            int l=r.nextInt(10);
-            int c=r.nextInt(10);
-            if(gabarito[l][c]==' '){
-
-            gabarito[l][c]='*';
-            }else {
-                i--;
+                game[i][j] = ' ';
             }
         }
     }
-    public void imprime(){
-        for(int i=0; i<10;i++){
-            for(int j=0;j<10;j++){
-                System.out.print("["+visual[i][j]+"]");
-            }
-            System.out.println();
-        }
+
+    public imrpime(){
+
     }
 
-    public boolean getFimJogo(){
-        return fimJogo;
-    }
-    public int getJogadas(){
-        return jogadas;
+    public desarme(int i, int j){
+
     }
 
-    public void desarme(int l, int c){
-        if(fimJogo!=true){
-           if(visual[l][c]=='?'){
-            visual[l][c]=gabarito[l][c];
-            jogadas++;
-            if(jogadas==90){
-                fimJogo=true;
-            }
-            if(visual[l][c]=='*'){
-                fimJogo=true;
-            }
+    getfinal(){
 
-           }
-        }
     }
 
+    
+
+
+
+    public static void main(String[] args) throws Exception {
+        CampoMinado match = new CampoMinado();
+        match;
+
+
+        
+    }
 }
