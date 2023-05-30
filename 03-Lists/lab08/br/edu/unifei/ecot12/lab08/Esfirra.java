@@ -6,4 +6,4 @@ public class Esfirra extends Salgado {
     public boolean isAberta(){
         return aberta;
     }
-}
+};
